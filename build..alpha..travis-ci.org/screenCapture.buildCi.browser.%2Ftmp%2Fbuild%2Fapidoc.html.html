@@ -1,0 +1,2038 @@
+<html><head></head><body><div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a href="http://cloudcmd.io">cloudcmd (v6.9.3)</a>
+</h1>
+<h4>Orthodox web file manager with console and editor</h4>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.cloudcmd">module cloudcmd</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cloudcmd.cloudcmd">
+            function <span class="apidocSignatureSpan"></span>cloudcmd
+            <span class="apidocSignatureSpan">(params)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cloudcmd.config">
+            function <span class="apidocSignatureSpan">cloudcmd.</span>config
+            <span class="apidocSignatureSpan">(key, value)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cloudcmd.emitify">
+            function <span class="apidocSignatureSpan">cloudcmd.</span>emitify
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cloudcmd.env">
+            function <span class="apidocSignatureSpan">cloudcmd.</span>env
+            <span class="apidocSignatureSpan">(name)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cloudcmd.terminal">
+            function <span class="apidocSignatureSpan">cloudcmd.</span>terminal
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">cloudcmd.</span>cloudfunc</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">cloudcmd.</span>emitify.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">cloudcmd.</span>entity</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">cloudcmd.</span>smalltalk</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">cloudcmd.</span>smalltalk_native</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">cloudcmd.</span>util</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">cloudcmd.</span>validate</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.cloudcmd.cloudfunc">module cloudcmd.cloudfunc</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cloudcmd.cloudfunc.buildFromJSON">
+            function <span class="apidocSignatureSpan">cloudcmd.cloudfunc.</span>buildFromJSON
+            <span class="apidocSignatureSpan">(params)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cloudcmd.cloudfunc.formatMsg">
+            function <span class="apidocSignatureSpan">cloudcmd.cloudfunc.</span>formatMsg
+            <span class="apidocSignatureSpan">(msg, name, status = 'ok')</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cloudcmd.cloudfunc.getTitle">
+            function <span class="apidocSignatureSpan">cloudcmd.cloudfunc.</span>getTitle
+            <span class="apidocSignatureSpan">(path)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">cloudcmd.cloudfunc.</span>MAX_FILE_SIZE</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">cloudcmd.cloudfunc.</span>Entity</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">cloudcmd.cloudfunc.</span>FS</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">cloudcmd.cloudfunc.</span>apiURL</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.cloudcmd.config">module cloudcmd.config</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cloudcmd.config.config">
+            function <span class="apidocSignatureSpan">cloudcmd.</span>config
+            <span class="apidocSignatureSpan">(key, value)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cloudcmd.config.listen">
+            function <span class="apidocSignatureSpan">cloudcmd.config.</span>listen
+            <span class="apidocSignatureSpan">(socket, authCheck)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cloudcmd.config.middle">
+            function <span class="apidocSignatureSpan">cloudcmd.config.</span>middle
+            <span class="apidocSignatureSpan">(req, res, next)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cloudcmd.config.save">
+            function <span class="apidocSignatureSpan">cloudcmd.config.</span>save
+            <span class="apidocSignatureSpan">(callback)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.cloudcmd.emitify">module cloudcmd.emitify</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cloudcmd.emitify.emitify">
+            function <span class="apidocSignatureSpan">cloudcmd.</span>emitify
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.cloudcmd.emitify.prototype">module cloudcmd.emitify.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cloudcmd.emitify.prototype._check">
+            function <span class="apidocSignatureSpan">cloudcmd.emitify.prototype.</span>_check
+            <span class="apidocSignatureSpan">(event, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cloudcmd.emitify.prototype.addListener">
+            function <span class="apidocSignatureSpan">cloudcmd.emitify.prototype.</span>addListener
+            <span class="apidocSignatureSpan">(event, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cloudcmd.emitify.prototype.emit">
+            function <span class="apidocSignatureSpan">cloudcmd.emitify.prototype.</span>emit
+            <span class="apidocSignatureSpan">(event)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cloudcmd.emitify.prototype.off">
+            function <span class="apidocSignatureSpan">cloudcmd.emitify.prototype.</span>off
+            <span class="apidocSignatureSpan">(event, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cloudcmd.emitify.prototype.on">
+            function <span class="apidocSignatureSpan">cloudcmd.emitify.prototype.</span>on
+            <span class="apidocSignatureSpan">(event, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cloudcmd.emitify.prototype.once">
+            function <span class="apidocSignatureSpan">cloudcmd.emitify.prototype.</span>once
+            <span class="apidocSignatureSpan">(event, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cloudcmd.emitify.prototype.removeAllListeners">
+            function <span class="apidocSignatureSpan">cloudcmd.emitify.prototype.</span>removeAllListeners
+            <span class="apidocSignatureSpan">(event)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cloudcmd.emitify.prototype.removeListener">
+            function <span class="apidocSignatureSpan">cloudcmd.emitify.prototype.</span>removeListener
+            <span class="apidocSignatureSpan">(event, callback)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.cloudcmd.entity">module cloudcmd.entity</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cloudcmd.entity.decode">
+            function <span class="apidocSignatureSpan">cloudcmd.entity.</span>decode
+            <span class="apidocSignatureSpan">(str)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cloudcmd.entity.encode">
+            function <span class="apidocSignatureSpan">cloudcmd.entity.</span>encode
+            <span class="apidocSignatureSpan">(str)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.cloudcmd.env">module cloudcmd.env</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cloudcmd.env.env">
+            function <span class="apidocSignatureSpan">cloudcmd.</span>env
+            <span class="apidocSignatureSpan">(name)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cloudcmd.env.bool">
+            function <span class="apidocSignatureSpan">cloudcmd.env.</span>bool
+            <span class="apidocSignatureSpan">(name)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.cloudcmd.smalltalk">module cloudcmd.smalltalk</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cloudcmd.smalltalk.alert">
+            function <span class="apidocSignatureSpan">cloudcmd.smalltalk.</span>alert
+            <span class="apidocSignatureSpan">(title, msg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cloudcmd.smalltalk.confirm">
+            function <span class="apidocSignatureSpan">cloudcmd.smalltalk.</span>confirm
+            <span class="apidocSignatureSpan">(title, msg, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cloudcmd.smalltalk.prompt">
+            function <span class="apidocSignatureSpan">cloudcmd.smalltalk.</span>prompt
+            <span class="apidocSignatureSpan">(title, msg, value = '', options)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.cloudcmd.smalltalk_native">module cloudcmd.smalltalk_native</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cloudcmd.smalltalk_native.alert">
+            function <span class="apidocSignatureSpan">cloudcmd.smalltalk_native.</span>alert
+            <span class="apidocSignatureSpan">(title, message)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cloudcmd.smalltalk_native.confirm">
+            function <span class="apidocSignatureSpan">cloudcmd.smalltalk_native.</span>confirm
+            <span class="apidocSignatureSpan">(title, message, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cloudcmd.smalltalk_native.prompt">
+            function <span class="apidocSignatureSpan">cloudcmd.smalltalk_native.</span>prompt
+            <span class="apidocSignatureSpan">(title, message, value, options)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.cloudcmd.terminal">module cloudcmd.terminal</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cloudcmd.terminal.terminal">
+            function <span class="apidocSignatureSpan">cloudcmd.</span>terminal
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cloudcmd.terminal.listen">
+            function <span class="apidocSignatureSpan">cloudcmd.terminal.</span>listen
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.cloudcmd.util">module cloudcmd.util</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cloudcmd.util.escapeRegExp">
+            function <span class="apidocSignatureSpan">cloudcmd.util.</span>escapeRegExp
+            <span class="apidocSignatureSpan">(str)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cloudcmd.util.exec">
+            function <span class="apidocSignatureSpan">cloudcmd.util.</span>exec
+            <span class="apidocSignatureSpan">(callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cloudcmd.util.extend">
+            function <span class="apidocSignatureSpan">cloudcmd.util.</span>extend
+            <span class="apidocSignatureSpan">(target, objFrom)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cloudcmd.util.extendProto">
+            function <span class="apidocSignatureSpan">cloudcmd.util.</span>extendProto
+            <span class="apidocSignatureSpan">(obj)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cloudcmd.util.findObjByNameInArr">
+            function <span class="apidocSignatureSpan">cloudcmd.util.</span>findObjByNameInArr
+            <span class="apidocSignatureSpan">(array, name)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cloudcmd.util.getExt">
+            function <span class="apidocSignatureSpan">cloudcmd.util.</span>getExt
+            <span class="apidocSignatureSpan">(name)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cloudcmd.util.getRegExp">
+            function <span class="apidocSignatureSpan">cloudcmd.util.</span>getRegExp
+            <span class="apidocSignatureSpan">(wildcard = '*')</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cloudcmd.util.getStrBigFirst">
+            function <span class="apidocSignatureSpan">cloudcmd.util.</span>getStrBigFirst
+            <span class="apidocSignatureSpan">(str)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cloudcmd.util.kebabToCamelCase">
+            function <span class="apidocSignatureSpan">cloudcmd.util.</span>kebabToCamelCase
+            <span class="apidocSignatureSpan">(str)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cloudcmd.util.time">
+            function <span class="apidocSignatureSpan">cloudcmd.util.</span>time
+            <span class="apidocSignatureSpan">(name)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cloudcmd.util.timeEnd">
+            function <span class="apidocSignatureSpan">cloudcmd.util.</span>timeEnd
+            <span class="apidocSignatureSpan">(name)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">cloudcmd.util.</span>json</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.cloudcmd.validate">module cloudcmd.validate</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cloudcmd.validate.editor">
+            function <span class="apidocSignatureSpan">cloudcmd.validate.</span>editor
+            <span class="apidocSignatureSpan">(name)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cloudcmd.validate.packer">
+            function <span class="apidocSignatureSpan">cloudcmd.validate.</span>packer
+            <span class="apidocSignatureSpan">(name)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cloudcmd.validate.root">
+            function <span class="apidocSignatureSpan">cloudcmd.validate.</span>root
+            <span class="apidocSignatureSpan">(dir, fn)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.cloudcmd" id="apidoc.module.cloudcmd">module cloudcmd</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.cloudcmd.cloudcmd" id="apidoc.element.cloudcmd.cloudcmd">
+        function <span class="apidocSignatureSpan"></span>cloudcmd
+        <span class="apidocSignatureSpan">(params)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">cloudcmd = function (params) {
+    var p = params || {};
+    var options = p.config || {};
+    var plugins = p.plugins;
+    var modules = p.modules;
+
+    var keys = Object.keys(options);
+
+    var prefix = void 0;
+
+    checkPlugins(plugins);
+
+    keys.forEach(function (name) {
+        var value = options[name];
+
+        switch (name) {
+            case 'root':
+                validate.root(value);
+                break;
+            case 'editor':
+                validate.editor(value);
+                break;
+            case 'packer':
+                validate.packer(value);
+                break;
+            case 'password':
+<span class="apidocCodeCommentSpan">                /* could be useful when used as middleware */
+</span>                value = criton(value, config('algo'));
+                break;
+            case 'prefix':
+                prefix = prefixer(value);
+                break;
+        }
+
+        config(name, value);
+    });
+
+    var console = config('console');
+    var configDialog = config('configDialog');
+
+    config('console', defaultValue(options.console, console));
+    config('configDialog', defaultValue(options.configDialog, configDialog));
+
+    if (p.socket) listen(prefix, p.socket);
+
+    return cloudcmd(prefix, plugins, modules);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cloudcmd.config" id="apidoc.element.cloudcmd.config">
+        function <span class="apidocSignatureSpan">cloudcmd.</span>config
+        <span class="apidocSignatureSpan">(key, value)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function manage(key, value) {
+    if (!key) return;
+
+    if (key === '*') return config;
+
+    if (value === undefined) return config[key];
+
+    config[key] = value;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cloudcmd.emitify" id="apidoc.element.cloudcmd.emitify">
+        function <span class="apidocSignatureSpan">cloudcmd.</span>emitify
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Emitify() {
+    if (this instanceof Emitify)
+        this._all = {};
+    else
+        return new Emitify();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cloudcmd.env" id="apidoc.element.cloudcmd.env">
+        function <span class="apidocSignatureSpan">cloudcmd.</span>env
+        <span class="apidocSignatureSpan">(name)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function parse(name) {
+    var small = 'cloudcmd_' + name;
+    var big = up(small);
+
+    return env[small] || env[big];
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cloudcmd.terminal" id="apidoc.element.cloudcmd.terminal">
+        function <span class="apidocSignatureSpan">cloudcmd.</span>terminal
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function noop() {}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.cloudcmd.cloudfunc" id="apidoc.module.cloudcmd.cloudfunc">module cloudcmd.cloudfunc</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.cloudcmd.cloudfunc.buildFromJSON" id="apidoc.element.cloudcmd.cloudfunc.buildFromJSON">
+        function <span class="apidocSignatureSpan">cloudcmd.cloudfunc.</span>buildFromJSON
+        <span class="apidocSignatureSpan">(params)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">(params) =&gt; {
+    const prefix = params.prefix;
+    const template = params.template;
+    const templateFile = template.file;
+    const templateLink = template.link;
+    const json = params.data;
+
+    const {path, files} = json;
+
+    const sort = params.sort || 'name';
+    const order = params.order || 'asc';
+
+<span class="apidocCodeCommentSpan">    /*
+     * Ð¡Ñ‚Ñ€Ð¾Ð¸Ð¼ Ð¿ÑƒÑ‚ÑŒ ÐºÐ°Ñ‚Ð°Ð»Ð¾Ð³Ð° Ð² ÐºÐ¾Ñ‚Ð¾Ñ€Ð¾Ð¼ Ð¼Ñ‹ Ð½Ð°Ñ…Ð¾Ð´Ð¸Ð¼ÑÑ
+     * ÑÐ¾ Ð²ÑÐµÐ¼Ð¸ Ð¿Ð¾Ð´ÐºÐ°Ñ‚Ð°Ð»Ð¾Ð³Ð°Ð¼Ð¸
+     */
+</span>    const htmlPath = getPathLink(path, prefix, template.pathLink);
+
+    let fileTable = rendy(template.path, {
+        link        : prefix + FS + path,
+        fullPath    : path,
+        path        : htmlPath
+    });
+
+    let name = 'name';
+    let size = 'size';
+    let date = 'date';
+    const owner = 'owner';
+    const mode = 'mode';
+    const arrow = order === 'asc' ?  'â†‘' : 'â†“';
+
+    if (sort === 'name' &amp;&amp; order !== 'asc')
+        name += arrow;
+    else if (sort === 'size')
+        size += arrow;
+    else if (sort === 'date')
+        date += arrow;
+
+    const header = rendy(templateFile, {
+        tag         : 'div',
+        attribute   : 'data-name="js-fm-header" ',
+        className   : 'fm-header',
+        type        : '',
+        name,
+        size,
+        date,
+        owner,
+        mode,
+    });
+
+    /* ÑÐ¾Ñ…Ñ€Ð°Ð½ÑÐµÐ¼ Ð¿ÑƒÑ‚ÑŒ */
+    Path(path);
+
+    fileTable += header + '&lt;ul data-name="js-files" class="files"&gt;';
+    /* Ð•ÑÐ»Ð¸ Ð¼Ñ‹ Ð½Ðµ Ð² ÐºÐ¾Ñ€Ð½Ðµ */
+    if (path !== '/') {
+        /* ÑƒÐ±Ð¸Ñ€Ð°ÐµÐ¼ Ð¿Ð¾ÑÐ»ÐµÐ´Ð½Ð¸Ð¹ ÑÐ»ÐµÑˆ Ð¸ ÐºÐ°Ñ‚Ð°Ð»Ð¾Ð³ Ð² ÐºÐ¾Ñ‚Ð¾Ñ€Ð¾Ð¼ Ð¼Ñ‹ ÑÐµÐ¹Ñ‡Ð°Ñ Ð½Ð°Ñ…Ð¾Ð´Ð¸Ð¼ÑÑ*/
+        const lastSlash  = path.substr(path, path.lastIndexOf('/'));
+        const dotDot = lastSlash.substr(lastSlash, lastSlash.lastIndexOf('/'));
+
+        const link = prefix + FS + (dotDot || '/');
+
+        const linkResult = rendy(template.link, {
+            link,
+            title       : '..',
+            name        : '..'
+        });
+
+        const dataName = 'data-name="js-file-.." ';
+        const attribute = 'draggable="true" ' + dataName;
+
+        /* Ð¡Ð¾Ñ…Ñ€Ð°Ð½ÑÐµÐ¼ Ð¿ÑƒÑ‚ÑŒ Ðº ÐºÐ°Ñ‚Ð°Ð»Ð¾Ð³Ñƒ Ð²ÐµÑ€Ñ…Ð½ÐµÐ³Ð¾ ÑƒÑ€Ð¾Ð²Ð½Ñ*/
+        fileTable += rendy(template.file, {
+            tag         : 'li',
+            attribute,
+            className   : '',
+            type        : 'directory',
+            name        : linkResult,
+            size        : '&amp;lt;dir&amp;gt;',
+            date        : '--.--.----',
+            owner       : '.',
+            mode        : '--- --- ---'
+        });
+    }
+
+    fileTable += files.map((file) =&gt; {
+        const link = prefix + FS + path + file.name;
+
+        const type = getType(file.size);
+        const size = getSize(file.size);
+
+        const date = file.date || '--.--.----';
+        const owner = file.owner || 'root';
+        const mode = file.mode;
+
+        const linkResult = rendy(templateLink, {
+            link,
+            title: file.name,
+            name: Entity.encode(file.name),
+            attribute: getAttribute(file.size)
+        });
+
+        const dataName = 'data-name="js-file-' + file.name + '" ';
+        const attribute = 'draggable="true" ' + dataName;
+
+        return rendy(templateFile, {
+            tag: 'li',
+            attribute,
+            className: '',
+            type,
+            name: linkResult,
+            size,
+            date,
+            owner,
+            mode,
+        });
+    }).join('');
+
+    fileTable += '&lt;/ul&gt;';
+
+    return fileTable;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+function buildIndex(json, callback) {
+    var isMinify = config('minify');
+
+    exec.if(!isMinify, function (error, name) {
+        fs.readFile(name || PATH_INDEX, 'utf8', function (error, template) {
+if (error) return;
+
+var panel = CloudFunc.<span class="apidocCodeKeywordSpan">buildFromJSON</span>({
+    data: json,
+    prefix: prefix(),
+    template: Template
+});
+
+var data = indexProcessing({
+    panel: panel,
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cloudcmd.cloudfunc.formatMsg" id="apidoc.element.cloudcmd.cloudfunc.formatMsg">
+        function <span class="apidocSignatureSpan">cloudcmd.cloudfunc.</span>formatMsg
+        <span class="apidocSignatureSpan">(msg, name, status = 'ok')</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">(msg, name, status = 'ok') =&gt; {
+    if (name)
+        name = '("' + name + '")';
+    else
+        name = '';
+
+    return msg + ': ' + status + name;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+        cryptoPass(json);
+        traverse(json);
+
+        save(function (error) {
+            if (error) return socket.emit('err', error.message);
+
+            var data = CloudFunc.<span class="apidocCodeKeywordSpan">formatMsg</span>('config', key(json));
+
+            socket.broadcast.send(json);
+            socket.send(json);
+            socket.emit('log', data);
+        });
+    });
+}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cloudcmd.cloudfunc.getTitle" id="apidoc.element.cloudcmd.cloudfunc.getTitle">
+        function <span class="apidocSignatureSpan">cloudcmd.cloudfunc.</span>getTitle
+        <span class="apidocSignatureSpan">(path)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">(path) =&gt; {
+    return  NAME + ' - ' + (path || Path());
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+if (!isOnePanel) right = rendy(Template.panel, {
+    side: 'right',
+    content: panel,
+    className: ''
+});
+
+data = rendy(data, {
+    title: CloudFunc.<span class="apidocCodeKeywordSpan">getTitle</span>(),
+    fm: left + right,
+    prefix: prefix(),
+    config: JSON.stringify(config('*')),
+    css: CSS_URL
+});
+
+return data;
+...</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.cloudcmd.config" id="apidoc.module.cloudcmd.config">module cloudcmd.config</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.cloudcmd.config.config" id="apidoc.element.cloudcmd.config.config">
+        function <span class="apidocSignatureSpan">cloudcmd.</span>config
+        <span class="apidocSignatureSpan">(key, value)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function manage(key, value) {
+    if (!key) return;
+
+    if (key === '*') return config;
+
+    if (value === undefined) return config[key];
+
+    config[key] = value;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cloudcmd.config.listen" id="apidoc.element.cloudcmd.config.listen">
+        function <span class="apidocSignatureSpan">cloudcmd.config.</span>listen
+        <span class="apidocSignatureSpan">(socket, authCheck)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">listen = function (socket, authCheck) {
+    check(socket, authCheck);
+
+    if (!manage('configDialog')) return middle;
+
+    listen(socket, authCheck);
+
+    return middle;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+const io = require('socket.io');
+const app = require('express')();
+
+const port = 1337;
+const prefix = '/cloudcmd';
+
+const server = http.createServer(app);
+const socket = io.<span class="apidocCodeKeywordSpan">listen</span>(server, {
+    path: `${prefix}/socket.io`
+});
+
+const config = {
+    prefix /* base URL or function which returns base URL (optional)   */
+};
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cloudcmd.config.middle" id="apidoc.element.cloudcmd.config.middle">
+        function <span class="apidocSignatureSpan">cloudcmd.config.</span>middle
+        <span class="apidocSignatureSpan">(req, res, next)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function middle(req, res, next) {
+    var noConfigDialog = !manage('configDialog');
+
+    if (req.url !== apiURL + '/config') return next();
+
+    switch (req.method) {
+        case 'GET':
+            get(req, res, next);
+            break;
+
+        case 'PATCH':
+            if (noConfigDialog) return res.status(404).send('Config is disabled');
+
+            patch(req, res, next);
+            break;
+
+        default:
+            next();
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cloudcmd.config.save" id="apidoc.element.cloudcmd.config.save">
+        function <span class="apidocSignatureSpan">cloudcmd.config.</span>save
+        <span class="apidocSignatureSpan">(callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function save(callback) {
+    writejson(ConfigHome, config, callback);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    config('password', getPassword(args.password));
+
+validateRoot(options.root);
+
+if (!args.save)
+    start(options);
+else
+    config.<span class="apidocCodeKeywordSpan">save</span>(() =&gt; {
+        start(options);
+    });
+}
+
+function validateRoot(root) {
+const validate = require(DIR_SERVER + 'validate');
+validate.root(root, console.log);
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.cloudcmd.emitify" id="apidoc.module.cloudcmd.emitify">module cloudcmd.emitify</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.cloudcmd.emitify.emitify" id="apidoc.element.cloudcmd.emitify.emitify">
+        function <span class="apidocSignatureSpan">cloudcmd.</span>emitify
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Emitify() {
+    if (this instanceof Emitify)
+        this._all = {};
+    else
+        return new Emitify();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.cloudcmd.emitify.prototype" id="apidoc.module.cloudcmd.emitify.prototype">module cloudcmd.emitify.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.cloudcmd.emitify.prototype._check" id="apidoc.element.cloudcmd.emitify.prototype._check">
+        function <span class="apidocSignatureSpan">cloudcmd.emitify.prototype.</span>_check
+        <span class="apidocSignatureSpan">(event, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_check = function (event, callback) {
+    var isTwo = arguments.length === 2;
+
+    if (typeof event !== 'string')
+        throw Error('event should be string!');
+
+    if (isTwo &amp;&amp; typeof callback !== 'function')
+        throw Error('callback should be function!');
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+if (isTwo &amp;&amp; typeof callback !== 'function')
+    throw Error('callback should be function!');
+};
+
+Emitify.prototype.on   = function(event, callback) {
+var funcs = this._all[event];
+
+this.<span class="apidocCodeKeywordSpan">_check</span>(event, callback);
+
+if (funcs)
+    funcs.push(callback);
+else
+    this._all[event] = [callback];
+
+return this;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cloudcmd.emitify.prototype.addListener" id="apidoc.element.cloudcmd.emitify.prototype.addListener">
+        function <span class="apidocSignatureSpan">cloudcmd.emitify.prototype.</span>addListener
+        <span class="apidocSignatureSpan">(event, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">addListener = function (event, callback) {
+    var funcs = this._all[event];
+
+    this._check(event, callback);
+
+    if (funcs)
+        funcs.push(callback);
+    else
+        this._all[event] = [callback];
+
+    return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cloudcmd.emitify.prototype.emit" id="apidoc.element.cloudcmd.emitify.prototype.emit">
+        function <span class="apidocSignatureSpan">cloudcmd.emitify.prototype.</span>emit
+        <span class="apidocSignatureSpan">(event)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">emit = function (event) {
+    var args    = [].slice.call(arguments, 1),
+        funcs   = this._all[event];
+
+    this._check(event);
+
+    if (funcs)
+        funcs.forEach(function(fn) {
+            fn.apply(null, args);
+        });
+    else if (event === 'error')
+        throw args[0];
+
+    return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+exec.if(!manage('auth'), connect, function (fn) {
+    authCheck(socket, fn);
+});
+    });
+}
+
+function connection(socket) {
+    socket.<span class="apidocCodeKeywordSpan">emit</span>('config', config);
+
+    socket.on('message', function (json) {
+if ((typeof json === 'undefined' ? 'undefined' : _typeof(json)) !== 'object') return socket.emit(&amp;#
+x27;err', 'Error: Wrong data type!');
+
+cryptoPass(json);
+traverse(json);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cloudcmd.emitify.prototype.off" id="apidoc.element.cloudcmd.emitify.prototype.off">
+        function <span class="apidocSignatureSpan">cloudcmd.emitify.prototype.</span>off
+        <span class="apidocSignatureSpan">(event, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">off = function (event, callback) {
+    var events  = this._all[event] || [],
+        index   = events.indexOf(callback);
+
+    this._check(event, callback);
+
+    while (~index) {
+        events.splice(index, 1);
+        index = events.indexOf(callback);
+    }
+
+    return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+Emitify.prototype.once  = function(event, callback) {
+var self = this;
+
+self._check(event, callback);
+
+self.on(event, function fn() {
+    callback.apply(null, arguments);
+    self.<span class="apidocCodeKeywordSpan">off</span>(event, fn);
+});
+
+return this;
+};
+
+Emitify.prototype.off   = function(event, callback) {
+var events  = this._all[event] || [],
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cloudcmd.emitify.prototype.on" id="apidoc.element.cloudcmd.emitify.prototype.on">
+        function <span class="apidocSignatureSpan">cloudcmd.emitify.prototype.</span>on
+        <span class="apidocSignatureSpan">(event, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">on = function (event, callback) {
+    var funcs = this._all[event];
+
+    this._check(event, callback);
+
+    if (funcs)
+        funcs.push(callback);
+    else
+        this._all[event] = [callback];
+
+    return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+function save(callback) {
+    writejson(ConfigHome, config, callback);
+}
+
+function listen(sock, authCheck) {
+    var prefix = manage('prefix');
+
+    sock.of(prefix + '/config').<span class="apidocCodeKeywordSpan">on</span>('connection', function (socket
+) {
+        var connect = exec.with(connection, socket);
+
+        exec.if(!manage('auth'), connect, function (fn) {
+            authCheck(socket, fn);
+        });
+    });
+}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cloudcmd.emitify.prototype.once" id="apidoc.element.cloudcmd.emitify.prototype.once">
+        function <span class="apidocSignatureSpan">cloudcmd.emitify.prototype.</span>once
+        <span class="apidocSignatureSpan">(event, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">once = function (event, callback) {
+    var self = this;
+
+    self._check(event, callback);
+
+    self.on(event, function fn() {
+        callback.apply(null, arguments);
+        self.off(event, fn);
+    });
+
+    return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cloudcmd.emitify.prototype.removeAllListeners" id="apidoc.element.cloudcmd.emitify.prototype.removeAllListeners">
+        function <span class="apidocSignatureSpan">cloudcmd.emitify.prototype.</span>removeAllListeners
+        <span class="apidocSignatureSpan">(event)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">removeAllListeners = function (event) {
+    this._check(event);
+    this._all[event] = [];
+
+    return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cloudcmd.emitify.prototype.removeListener" id="apidoc.element.cloudcmd.emitify.prototype.removeListener">
+        function <span class="apidocSignatureSpan">cloudcmd.emitify.prototype.</span>removeListener
+        <span class="apidocSignatureSpan">(event, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">removeListener = function (event, callback) {
+    var events  = this._all[event] || [],
+        index   = events.indexOf(callback);
+
+    this._check(event, callback);
+
+    while (~index) {
+        events.splice(index, 1);
+        index = events.indexOf(callback);
+    }
+
+    return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.cloudcmd.entity" id="apidoc.module.cloudcmd.entity">module cloudcmd.entity</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.cloudcmd.entity.decode" id="apidoc.element.cloudcmd.entity.decode">
+        function <span class="apidocSignatureSpan">cloudcmd.entity.</span>decode
+        <span class="apidocSignatureSpan">(str)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">decode = function (str) {
+    keys.forEach(function (code) {
+        var char = Entities[code];
+        var reg = RegExp(code, 'g');
+
+        str = str.replace(reg, char);
+    });
+
+    return str;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cloudcmd.entity.encode" id="apidoc.element.cloudcmd.entity.encode">
+        function <span class="apidocSignatureSpan">cloudcmd.entity.</span>encode
+        <span class="apidocSignatureSpan">(str)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">encode = function (str) {
+    keys.forEach(function (code) {
+        var char = Entities[code];
+        var reg = RegExp(char, 'g');
+
+        str = str.replace(reg, code);
+    });
+
+    return str;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.cloudcmd.env" id="apidoc.module.cloudcmd.env">module cloudcmd.env</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.cloudcmd.env.env" id="apidoc.element.cloudcmd.env.env">
+        function <span class="apidocSignatureSpan">cloudcmd.</span>env
+        <span class="apidocSignatureSpan">(name)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function parse(name) {
+    var small = 'cloudcmd_' + name;
+    var big = up(small);
+
+    return env[small] || env[big];
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cloudcmd.env.bool" id="apidoc.element.cloudcmd.env.bool">
+        function <span class="apidocSignatureSpan">cloudcmd.env.</span>bool
+        <span class="apidocSignatureSpan">(name)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">bool = function (name) {
+    var value = parse(name);
+
+    if (value === 'false') return false;
+
+    return value;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    packer      : config('packer') || 'tar',
+    zip         : config('zip'),
+    username    : config('username'),
+    root        : config('root') || '/',
+    prefix      : config('prefix') || '',
+    progress    : config('progress'),
+    console     : config('console'),
+    terminal    : choose(env.<span class="apidocCodeKeywordSpan">bool</span>('terminal'), config('terminal')),
+
+    'terminal-path': env('terminal_path') || config('terminalPath'),
+    'config-dialog': choose(env.bool('config_dialog'), config('configDialog')),
+    'one-panel-mode': config('onePanelMode'),
+    'html-dialogs': config('htmlDialogs')
+},
+alias: {
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.cloudcmd.smalltalk" id="apidoc.module.cloudcmd.smalltalk">module cloudcmd.smalltalk</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.cloudcmd.smalltalk.alert" id="apidoc.element.cloudcmd.smalltalk.alert">
+        function <span class="apidocSignatureSpan">cloudcmd.smalltalk.</span>alert
+        <span class="apidocSignatureSpan">(title, msg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">(title, msg) =&gt; {
+    return showDialog(title, msg, '', BUTTON_OK, {cancel: false});
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cloudcmd.smalltalk.confirm" id="apidoc.element.cloudcmd.smalltalk.confirm">
+        function <span class="apidocSignatureSpan">cloudcmd.smalltalk.</span>confirm
+        <span class="apidocSignatureSpan">(title, msg, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">(title, msg, options) =&gt; {
+    return showDialog(title, msg, '', BUTTON_OK_CANCEL, options);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cloudcmd.smalltalk.prompt" id="apidoc.element.cloudcmd.smalltalk.prompt">
+        function <span class="apidocSignatureSpan">cloudcmd.smalltalk.</span>prompt
+        <span class="apidocSignatureSpan">(title, msg, value = '', options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">(title, msg, value = '', options) =&gt; {
+    const val = value.replace(/\"/g, '&amp;quot;');
+    const valueStr = `&lt;input type="text" value="${ val }" data-name="js-input"&gt;`;
+
+    return showDialog(title, msg, valueStr, BUTTON_OK_CANCEL, options);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.cloudcmd.smalltalk_native" id="apidoc.module.cloudcmd.smalltalk_native">module cloudcmd.smalltalk_native</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.cloudcmd.smalltalk_native.alert" id="apidoc.element.cloudcmd.smalltalk_native.alert">
+        function <span class="apidocSignatureSpan">cloudcmd.smalltalk_native.</span>alert
+        <span class="apidocSignatureSpan">(title, message)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">(title, message) =&gt; {
+    const promise = new Promise(function(resolve) {
+        alert(message);
+        resolve();
+    });
+
+    return promise;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cloudcmd.smalltalk_native.confirm" id="apidoc.element.cloudcmd.smalltalk_native.confirm">
+        function <span class="apidocSignatureSpan">cloudcmd.smalltalk_native.</span>confirm
+        <span class="apidocSignatureSpan">(title, message, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">(title, message, options) =&gt; {
+    const o         = options,
+        noCancel    = o &amp;&amp; !o.cancel,
+        promise     = new Promise(function(resolve, reject) {
+            const is = confirm(message);
+
+            if (is || noCancel)
+                resolve();
+            else
+                reject();
+        });
+
+    return promise;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cloudcmd.smalltalk_native.prompt" id="apidoc.element.cloudcmd.smalltalk_native.prompt">
+        function <span class="apidocSignatureSpan">cloudcmd.smalltalk_native.</span>prompt
+        <span class="apidocSignatureSpan">(title, message, value, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">(title, message, value, options) =&gt; {
+    const o     = options,
+        promise = new Promise(function(resolve, reject) {
+            const noCancel = o &amp;&amp; !o.cancel,
+                result  = prompt(message, value);
+
+            if (result !== null)
+                resolve(result);
+            else if (!noCancel)
+                reject();
+        });
+
+    return promise;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.cloudcmd.terminal" id="apidoc.module.cloudcmd.terminal">module cloudcmd.terminal</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.cloudcmd.terminal.terminal" id="apidoc.element.cloudcmd.terminal.terminal">
+        function <span class="apidocSignatureSpan">cloudcmd.</span>terminal
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function noop() {}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cloudcmd.terminal.listen" id="apidoc.element.cloudcmd.terminal.listen">
+        function <span class="apidocSignatureSpan">cloudcmd.terminal.</span>listen
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function noop() {}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+const io = require('socket.io');
+const app = require('express')();
+
+const port = 1337;
+const prefix = '/cloudcmd';
+
+const server = http.createServer(app);
+const socket = io.<span class="apidocCodeKeywordSpan">listen</span>(server, {
+    path: `${prefix}/socket.io`
+});
+
+const config = {
+    prefix /* base URL or function which returns base URL (optional)   */
+};
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.cloudcmd.util" id="apidoc.module.cloudcmd.util">module cloudcmd.util</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.cloudcmd.util.escapeRegExp" id="apidoc.element.cloudcmd.util.escapeRegExp">
+        function <span class="apidocSignatureSpan">cloudcmd.util.</span>escapeRegExp
+        <span class="apidocSignatureSpan">(str)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">(str) =&gt; {
+    const isStr = typeof str === 'string';
+
+    if (isStr)
+        str = str.replace(/[-[\]{}()*+?.,\\^$|#\s]/g, '\\$&amp;');
+
+    return str;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cloudcmd.util.exec" id="apidoc.element.cloudcmd.util.exec">
+        function <span class="apidocSignatureSpan">cloudcmd.util.</span>exec
+        <span class="apidocSignatureSpan">(callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">exec = function (callback) {
+    var ret,
+        isFunc  = typeof callback === 'function',
+        args    = slice.call(arguments, 1);
+
+    if (isFunc)
+        ret     = callback.apply(null, args);
+
+    return ret;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cloudcmd.util.extend" id="apidoc.element.cloudcmd.util.extend">
+        function <span class="apidocSignatureSpan">cloudcmd.util.</span>extend
+        <span class="apidocSignatureSpan">(target, objFrom)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">(target, objFrom) =&gt; {
+    const isFunc  = itype.function(objFrom);
+    const isArray = Array.isArray(objFrom);
+    const isObj = itype.object(target);
+    let ret = isObj ? target : {};
+
+    if (isArray)
+        objFrom.forEach((item) =&gt; {
+           ret = Util.extend(target, item);
+        });
+
+    else if (objFrom) {
+        const obj = isFunc ? new objFrom() : objFrom;
+        let keys = Object.keys(obj);
+
+        if (!keys.length) {
+            const proto = Object.getPrototypeOf(objFrom);
+            keys = Object.keys(proto);
+        }
+
+        keys.forEach((name) =&gt; {
+            ret[name] = obj[name];
+        });
+    }
+
+    return ret;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+const isFunc  = itype.function(objFrom);
+const isArray = Array.isArray(objFrom);
+const isObj = itype.object(target);
+let ret = isObj ? target : {};
+
+if (isArray)
+    objFrom.forEach((item) =&gt; {
+       ret = Util.<span class="apidocCodeKeywordSpan">extend</span>(target, item);
+    });
+
+else if (objFrom) {
+    const obj = isFunc ? new objFrom() : objFrom;
+    let keys = Object.keys(obj);
+
+    if (!keys.length) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cloudcmd.util.extendProto" id="apidoc.element.cloudcmd.util.extendProto">
+        function <span class="apidocSignatureSpan">cloudcmd.util.</span>extendProto
+        <span class="apidocSignatureSpan">(obj)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">(obj) =&gt; {
+    const F = () =&gt; {};
+    F.prototype = extend({}, obj);
+    return new F();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cloudcmd.util.findObjByNameInArr" id="apidoc.element.cloudcmd.util.findObjByNameInArr">
+        function <span class="apidocSignatureSpan">cloudcmd.util.</span>findObjByNameInArr
+        <span class="apidocSignatureSpan">(array, name)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">(array, name) =&gt; {
+    let ret;
+
+     if (!Array.isArray(array))
+        throw Error('array should be array!');
+
+    if (typeof name !== 'string')
+        throw Error('name should be string!');
+
+    array.some((item) =&gt; {
+        let is = item.name === name;
+        const isArray = Array.isArray(item);
+
+        if (is)
+            ret = item;
+        else if (isArray)
+            item.some((item) =&gt; {
+                is = item.name === name;
+
+                if (is)
+                    ret = item.data;
+
+                return is;
+            });
+
+        return is;
+    });
+
+    return ret;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cloudcmd.util.getExt" id="apidoc.element.cloudcmd.util.getExt">
+        function <span class="apidocSignatureSpan">cloudcmd.util.</span>getExt
+        <span class="apidocSignatureSpan">(name)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">(name) =&gt; {
+    const isStr = typeof name === 'string'
+
+    if (!isStr)
+        return '';
+
+    const dot = name.lastIndexOf('.');
+
+    if (~dot)
+        return name.substr(dot);
+
+    return '';
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cloudcmd.util.getRegExp" id="apidoc.element.cloudcmd.util.getRegExp">
+        function <span class="apidocSignatureSpan">cloudcmd.util.</span>getRegExp
+        <span class="apidocSignatureSpan">(wildcard = '*')</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">(wildcard = '*') =&gt; {
+    const escaped = '^' + wildcard // search from start of line
+        .replace('.', '\\.')
+        .replace('*', '.*')
+        .replace('?', '.?') + '$'; // search to end of line
+
+    const regExp = new RegExp(escaped);
+
+    return regExp;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cloudcmd.util.getStrBigFirst" id="apidoc.element.cloudcmd.util.getStrBigFirst">
+        function <span class="apidocSignatureSpan">cloudcmd.util.</span>getStrBigFirst
+        <span class="apidocSignatureSpan">(str)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getStrBigFirst(str) {
+    if (!str)
+        throw Error('str could not be empty!');
+
+    const first = str[0].toUpperCase();
+    return first + str.slice(1);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cloudcmd.util.kebabToCamelCase" id="apidoc.element.cloudcmd.util.kebabToCamelCase">
+        function <span class="apidocSignatureSpan">cloudcmd.util.</span>kebabToCamelCase
+        <span class="apidocSignatureSpan">(str)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function kebabToCamelCase(str) {
+    if (!str)
+        throw Error('str could not be empty!');
+
+    return str
+        .split('-')
+        .map(getStrBigFirst)
+        .join('')
+        .replace(/.js$/, '');
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cloudcmd.util.time" id="apidoc.element.cloudcmd.util.time">
+        function <span class="apidocSignatureSpan">cloudcmd.util.</span>time
+        <span class="apidocSignatureSpan">(name)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">(name) =&gt; {
+    const console = Scope.console;
+
+    exec.ifExist(console, 'time', [name]);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cloudcmd.util.timeEnd" id="apidoc.element.cloudcmd.util.timeEnd">
+        function <span class="apidocSignatureSpan">cloudcmd.util.</span>timeEnd
+        <span class="apidocSignatureSpan">(name)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">(name) =&gt; {
+    const console = Scope.console;
+
+    exec.ifExist(console, 'timeEnd', [name]);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.cloudcmd.validate" id="apidoc.module.cloudcmd.validate">module cloudcmd.validate</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.cloudcmd.validate.editor" id="apidoc.element.cloudcmd.validate.editor">
+        function <span class="apidocSignatureSpan">cloudcmd.validate.</span>editor
+        <span class="apidocSignatureSpan">(name)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function editor(name) {
+    var reg = /^(dword|edward|deepword)$/;
+
+    if (!reg.test(name)) exit('cloudcmd --editor: could be "dword", "edward" or "deepword" only');
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cloudcmd.validate.packer" id="apidoc.element.cloudcmd.validate.packer">
+        function <span class="apidocSignatureSpan">cloudcmd.validate.</span>packer
+        <span class="apidocSignatureSpan">(name)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function packer(name) {
+    var reg = /^(tar|zip)$/;
+
+    if (!reg.test(name)) exit('cloudcmd --packer: could be "tar" or "zip" only');
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cloudcmd.validate.root" id="apidoc.element.cloudcmd.validate.root">
+        function <span class="apidocSignatureSpan">cloudcmd.validate.</span>root
+        <span class="apidocSignatureSpan">(dir, fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function root(dir, fn) {
+    if (typeof dir !== 'string') throw Error('dir should be a string');
+
+    if (dir === '/') return;
+
+    var fs = require('fs');
+
+    fs.stat(dir, function (error) {
+        if (error) return exit('cloudcmd --root: %s', error.message);
+
+        if (typeof fn === 'function') fn('root:', dir);
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+        config.save(() =&gt; {
+            start(options);
+        });
+}
+
+function validateRoot(root) {
+    const validate = require(DIR_SERVER + 'validate');
+    validate.<span class="apidocCodeKeywordSpan">root</span>(root, console.log);
+}
+
+function getPassword(password) {
+    const criton = require('criton');
+
+    return criton(password, config('algo'));
+}
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
+</body></html>
